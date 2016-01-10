@@ -1,0 +1,44 @@
+name:                bitpay
+version:             0.1.0.0
+synopsis:            Bitpay client
+license-file:        LICENSE
+author:              David Johnson
+maintainer:          djohnson.m@gmail.com
+copyright:           David Johnson (c) 2015
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+description:         Bitpay client
+
+library
+  exposed-modules:     Network.BitPay
+  other-modules:       Network.BitPay.Bill
+                       Network.BitPay.Client
+                       Network.BitPay.Currency
+                       Network.BitPay.Invoice
+                       Network.BitPay.Ledger
+                       Network.BitPay.Organization
+                       Network.BitPay.Payout
+                       Network.BitPay.Rate
+                       Network.BitPay.Session
+                       Network.BitPay.Settlement
+                       Network.BitPay.Subscription
+                       Network.BitPay.Token
+                       Network.BitPay.Industry
+                       Network.BitPay.Types
+
+  hs-source-dirs:      src
+  ghc-options:         -Wall
+  build-depends:       aeson
+                     , base >=4.7 && <5
+                     , bytestring
+                     , either == 4.4.*
+                     , haskoin-core
+                     , secp256k1
+                     , entropy
+                     , servant
+                     , servant-client
+                     , text
+                     , time
+                     , transformers == 0.4.*
+  default-language:    Haskell2010
